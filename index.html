@@ -6,7 +6,9 @@
   <title>Mivule Shades</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    body { font-family: 'Inter', sans-serif; }
     /* Forest Breeze Custom Colors */
     :root {
       --primary: #2F4F32;
@@ -23,69 +25,74 @@
     .bg-accent { background-color: var(--accent); }
     .bg-light { background-color: var(--bg-light); }
     .text-dark { color: var(--text-dark); }
+    .card-hover:hover { transform: translateY(-5px); box-shadow: 0 12px 20px rgba(0,0,0,0.15); }
   </style>
 </head>
-<body class="font-sans bg-light text-dark">
+<body class="bg-light text-dark">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-md fixed w-full z-50">
+  <nav class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
-        <div class="flex-shrink-0 text-primary font-bold text-xl">
-          Mivule Shades
-        </div>
+        <div class="flex-shrink-0 text-primary font-bold text-xl">Mivule Shades</div>
         <div class="hidden md:flex space-x-8">
-          <a href="#" class="hover:text-secondary">Home</a>
-          <a href="#about" class="hover:text-secondary">About</a>
-          <a href="#spaces" class="hover:text-secondary">Spaces</a>
-          <a href="#contact" class="hover:text-secondary">Contact</a>
+          <a href="#" class="hover:text-secondary transition">Home</a>
+          <a href="#about" class="hover:text-secondary transition">About</a>
+          <a href="#spaces" class="hover:text-secondary transition">Spaces</a>
+          <a href="#contact" class="hover:text-secondary transition">Contact</a>
         </div>
         <div class="md:hidden">
-          <button id="mobile-menu-button" class="text-primary focus:outline-none">
-            ☰
-          </button>
+          <button id="mobile-menu-button" class="text-primary focus:outline-none">☰</button>
         </div>
       </div>
     </div>
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-1 bg-white">
-      <a href="#" class="block hover:text-secondary">Home</a>
-      <a href="#about" class="block hover:text-secondary">About</a>
-      <a href="#spaces" class="block hover:text-secondary">Spaces</a>
-      <a href="#contact" class="block hover:text-secondary">Contact</a>
+      <a href="#" class="block hover:text-secondary transition">Home</a>
+      <a href="#about" class="block hover:text-secondary transition">About</a>
+      <a href="#spaces" class="block hover:text-secondary transition">Spaces</a>
+      <a href="#contact" class="block hover:text-secondary transition">Contact</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative bg-cover bg-center h-screen mt-16" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');">
-    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+  <section class="relative bg-cover bg-center h-screen" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80');">
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/25 to-black/40 flex items-center justify-center">
       <div class="text-center px-4">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">Mivule Shades</h1>
-        <p class="text-lg sm:text-xl md:text-2xl text-white mb-6">Versatile Space Rental for Events, Corporate Functions, and Family Gatherings</p>
-        <a href="#contact" class="bg-accent text-primary font-semibold py-3 px-6 rounded hover:bg-secondary transition">Inquire Now</a>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">Mivule Shades</h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-white mb-6 drop-shadow-md">Versatile Space Rental for Events, Corporate Functions, and Family Gatherings</p>
+        <a href="#contact" class="inline-flex items-center bg-accent text-primary font-semibold py-4 px-8 rounded-lg text-lg hover:bg-secondary transition">
+          <i class="fas fa-calendar-alt mr-2"></i> Inquire Now
+        </a>
       </div>
     </div>
   </section>
 
   <!-- Celebrate / Connect / Cherish Section -->
   <section class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-3 gap-8 text-center">
-    <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition flex flex-col items-center">
+    <div class="bg-white rounded-lg shadow-lg p-6 card-hover transition flex flex-col items-center">
       <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=600&q=80" alt="Celebrate" class="w-full h-48 mb-4 object-cover">
-      <h3 class="text-2xl font-bold text-primary mb-4">Celebrate</h3>
+      <h3 class="text-2xl font-bold text-primary mb-2"><i class="fas fa-birthday-cake mr-2"></i>Celebrate</h3>
       <p>From intimate Weddings and vibrant Birthdays to culturally rich Traditional Ceremonies, our lush gardens and covered areas provide a stunning backdrop for life's milestones.</p>
-      <a href="#spaces" class="mt-4 inline-block bg-secondary text-white font-semibold py-2 px-4 rounded hover:bg-accent transition">Explore Event Spaces</a>
+      <a href="#spaces" class="mt-4 inline-flex items-center justify-center bg-secondary text-white font-semibold py-2 px-4 rounded hover:bg-accent transition">
+        Explore Event Spaces
+      </a>
     </div>
-    <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition flex flex-col items-center">
+    <div class="bg-white rounded-lg shadow-lg p-6 card-hover transition flex flex-col items-center">
       <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="Connect" class="w-full h-48 mb-4 object-cover">
-      <h3 class="text-2xl font-bold text-primary mb-4">Connect</h3>
+      <h3 class="text-2xl font-bold text-primary mb-2"><i class="fas fa-handshake mr-2"></i>Connect</h3>
       <p>Elevate your next Corporate Event, Team Building Activity, or workshop in our inspiring environment that fosters authentic collaboration and fresh thinking.</p>
-      <a href="#spaces" class="mt-4 inline-block bg-secondary text-white font-semibold py-2 px-4 rounded hover:bg-accent transition">Book Corporate Space</a>
+      <a href="#spaces" class="mt-4 inline-flex items-center justify-center bg-secondary text-white font-semibold py-2 px-4 rounded hover:bg-accent transition">
+        Book Corporate Space
+      </a>
     </div>
-    <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition flex flex-col items-center">
+    <div class="bg-white rounded-lg shadow-lg p-6 card-hover transition flex flex-col items-center">
       <img src="https://images.unsplash.com/photo-1591027587212-49012eb2826e?auto=format&fit=crop&w=600&q=80" alt="Cherish" class="w-full h-48 mb-4 object-cover">
-      <h3 class="text-2xl font-bold text-primary mb-4">Cherish</h3>
+      <h3 class="text-2xl font-bold text-primary mb-2"><i class="fas fa-heart mr-2"></i>Cherish</h3>
       <p>Dedicated areas for Family Events and Children's Play ensure a perfect balance of fun, safety, and tranquility to help you preserve the moments that matter most.</p>
-      <a href="#spaces" class="mt-4 inline-block bg-secondary text-white font-semibold py-2 px-4 rounded hover:bg-accent transition">View Amenities</a>
+      <a href="#spaces" class="mt-4 inline-flex items-center justify-center bg-secondary text-white font-semibold py-2 px-4 rounded hover:bg-accent transition">
+        View Amenities
+      </a>
     </div>
   </section>
 
@@ -103,7 +110,7 @@
     <h2 class="text-3xl font-bold text-primary text-center mb-12">Our Spaces: Designed for Flexibility. Reserved for You.</h2>
     <div class="grid md:grid-cols-3 gap-8">
       <!-- Event Grounds -->
-      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition">
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition card-hover">
         <img src="https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=600&q=80" alt="Event Grounds" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-primary mb-4">Event Grounds Rental</h3>
@@ -116,7 +123,7 @@
         </div>
       </div>
       <!-- Corporate -->
-      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition">
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition card-hover">
         <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Corporate Space" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-primary mb-4">Corporate & Team Space</h3>
@@ -129,7 +136,7 @@
         </div>
       </div>
       <!-- Family -->
-      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition">
+      <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition card-hover">
         <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=600&q=80" alt="Family Space" class="w-full h-48 object-cover rounded-t-lg">
         <div class="p-6">
           <h3 class="text-2xl font-bold text-primary mb-4">Daily Leisure & Family</h3>
@@ -144,10 +151,12 @@
   </section>
 
   <!-- Contact CTA Section -->
-  <section id="contact" class="bg-primary py-16 text-center">
-    <h2 class="text-3xl font-bold text-white mb-6">Secure Your Space. Start Planning Today.</h2>
-    <p class="text-white mb-6">We look forward to hosting your next successful event or gathering. Fill the form below, and our team will respond within one business day.</p>
-    <a href="#" class="bg-accent text-primary font-semibold py-3 px-6 rounded hover:bg-secondary transition">Submit Inquiry & Check Availability</a>
+  <section id="contact" class="bg-primary py-20 text-center">
+    <h2 class="text-4xl font-bold text-white mb-6 drop-shadow-lg">Secure Your Space. Start Planning Today.</h2>
+    <p class="text-white text-lg mb-8">We look forward to hosting your next successful event or gathering. Fill the form below, and our team will respond within one business day.</p>
+    <a href="#" class="inline-flex items-center justify-center bg-accent text-primary font-semibold py-4 px-8 rounded-lg text-lg hover:bg-secondary transition">
+      <i class="fas fa-envelope mr-2"></i> Submit Inquiry & Check Availability
+    </a>
   </section>
 
   <!-- Footer -->
