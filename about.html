@@ -188,7 +188,12 @@
       </div>
     </div>
   </footer>
-  
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+
   <script src="https://kit.fontawesome.com/a2e00a5a57.js" crossorigin="anonymous"></script>
 </body>
 
