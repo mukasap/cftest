@@ -11,23 +11,35 @@
 <body class="bg-[#F7F9F3] text-[#2E2E2E]">
   
   <!-- NAVBAR (non-fixed) -->
-  <header class="w-full bg-white shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-[#2F4F32]">Mivule Shades</h1>
-      <nav class="hidden md:flex gap-6">
-        <a href="/" class="hover:text-[#7BBF6A]">Home</a>
-        <a href="/about" class="text-[#2F4F32] font-semibold">About</a>
-        <a href="spaces.html" class="hover:text-[#7BBF6A]">Spaces</a>
-        <a href="contact.html" class="hover:text-[#7BBF6A]">Contact</a>
-      </nav>
+    <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0 text-primary font-bold text-xl">Mivule Shades</div>
+        <div class="hidden md:flex space-x-8">
+          <a href="/" class="hover:text-secondary transition">Home</a>
+          <a href="/about.html" class="hover:text-secondary transition">About</a>
+          <a href="/spaces.html" class="hover:text-secondary transition">Spaces</a>
+          <a href="#contact" class="hover:text-secondary transition">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-primary focus:outline-none">☰</button>
+        </div>
+      </div>
     </div>
-  </header>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-1 bg-white">
+      <a href="/" class="block hover:text-secondary transition">Home</a>
+      <a href="/about" class="block hover:text-secondary transition">About Us</a>
+      <a href="/services" class="block hover:text-secondary transition">Services</a>
+      <a href="/contact" class="block hover:text-secondary transition">Contact</a>
+    </div>
+  </nav>
   
   <!-- SMALL BANNER -->
   <section class="w-full h-[200px] bg-cover bg-center" style="background-image: url('/images/abstract1.png');">
     <div class="w-full h-full bg-black/30 flex items-center justify-center">
       <h2 class="text-white text-4xl md:text-5xl font-bold">
-        About Mivule Shades
+        About 
       </h2>
     </div>
   </section>
