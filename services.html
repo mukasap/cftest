@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mivule Shades – Our Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Colors to match your Home + About pages -->
+  <style>
+    :root {
+      --primary-yellow: #f6c744;
+      --dark-green: #1f331f;
+      --light-cream: #faf7f0;
+      --soft-green: #e7f2e7;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- NAVBAR (same as homepage but not fixed) -->
+  <header class="w-full bg-white shadow-sm">
+    <div class="mx-auto max-w-7xl px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-[var(--dark-green)]">Mivule Shades</h1>
+
+      <nav class="space-x-6 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-[var(--primary-yellow)]">Home</a>
+        <a href="about.html" class="hover:text-[var(--primary-yellow)]">About</a>
+        <a href="services.html" class="text-[var(--primary-yellow)] font-semibold">Services</a>
+        <a href="contact.html" class="hover:text-[var(--primary-yellow)]">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE BANNER -->
+  <section
+    class="w-full h-60 md:h-72 bg-cover bg-center flex items-center justify-center"
+    style="background-image: url('/images/services/banner.jpg');"
+  >
+    <div class="bg-black/40 p-6 rounded-xl">
+      <h2 class="text-white text-3xl md:text-5xl font-bold">
+        Our Services
+      </h2>
+      <p class="text-white text-center mt-2 md:text-lg">
+        Spaces designed for celebration, connection, and cherished memories.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES GRID -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h3 class="text-3xl font-bold text-center text-[var(--dark-green)] mb-12">
+      What We Offer
+    </h3>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- SERVICE CARD TEMPLATE -->
+      <!-- 1. Outdoor Event Space Rental -->
+      <div class="bg-[var(--soft-green)] rounded-xl shadow-md overflow-hidden">
+        <img src="/images/services/event-space.jpg" alt="" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-[var(--dark-green)]">Outdoor Event Space</h4>
+          <p class="mt-2">
+            Beautiful, spacious grounds ideal for weddings, ceremonies, festivals, and large celebrations.
+          </p>
+
+          <ul class="mt-3 space-y-1 text-sm">
+            <li>✔ Wide open garden</li>
+            <li>✔ Ample parking + 24/7 security</li>
+            <li>✔ Flexibility for all décor styles</li>
+          </ul>
+
+          <button class="mt-4 w-full bg-[var(--primary-yellow)] text-white font-bold py-2 rounded-lg hover:opacity-90">
+            Book Now
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Garden Meeting Space -->
+      <div class="bg-[var(--soft-green)] rounded-xl shadow-md overflow-hidden">
+        <img src="/images/services/meeting.jpg" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-[var(--dark-green)]">Garden Meeting Space</h4>
+          <p class="mt-2">
+            Nature-powered workspaces ideal for strategic meetings, workshops, and executive retreats.
+          </p>
+
+          <ul class="mt-3 space-y-1 text-sm">
+            <li>✔ Quiet and private zones</li>
+            <li>✔ Power access + optional Wi-Fi</li>
+            <li>✔ Inspiring natural environment</li>
+          </ul>
+
+          <button class="mt-4 w-full bg-[var(--primary-yellow)] text-white font-bold py-2 rounded-lg">
+            Book Now
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. Kids Play & Family Area -->
+      <div class="bg-[var(--soft-green)] rounded-xl shadow-md overflow-hidden">
+        <img src="/images/services/kids-play.jpg" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-[var(--dark-green)]">Kids’ Play & Family Area</h4>
+          <p class="mt-2">
+            Safe, fun outdoor play areas for children, families, and small celebrations.
+          </p>
+
+          <ul class="mt-3 space-y-1 text-sm">
+            <li>✔ Dedicated kids’ zone</li>
+            <li>✔ Perfect for birthdays</li>
+            <li>✔ Clean, well-maintained facilities</li>
+          </ul>
+
+          <button class="mt-4 w-full bg-[var(--primary-yellow)] text-white font-bold py-2 rounded-lg">
+            Book Now
+          </button>
+        </div>
+      </div>
+
+      <!-- 4. Photoshoot Location -->
+      <div class="bg-[var(--soft-green)] rounded-xl shadow-md overflow-hidden">
+        <img src="/images/services/photoshoot.jpg" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-[var(--dark-green)]">Photoshoot Ground</h4>
+          <p class="mt-2">
+            Scenic backdrops for portraits, pre-wedding shoots, brand shoots, and more.
+          </p>
+
+          <ul class="mt-3 space-y-1 text-sm">
+            <li>✔ Lush gardens</li>
+            <li>✔ Flexible timing</li>
+            <li>✔ Easy access + privacy</li>
+          </ul>
+
+          <button class="mt-4 w-full bg-[var(--primary-yellow)] text-white font-bold py-2 rounded-lg">
+            Book Now
+          </button>
+        </div>
+      </div>
+
+      <!-- 5. Small Celebrations -->
+      <div class="bg-[var(--soft-green)] rounded-xl shadow-md overflow-hidden">
+        <img src="/images/services/small-gathering.jpg" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-[var(--dark-green)]">Small Celebrations</h4>
+          <p class="mt-2">
+            Intimate, beautiful spaces for birthdays, proposals, anniversaries, and meaningful moments.
+          </p>
+
+          <ul class="mt-3 space-y-1 text-sm">
+            <li>✔ Cosy natural spots</li>
+            <li>✔ Flexible booking hours</li>
+            <li>✔ Affordable rates</li>
+          </ul>
+
+          <button class="mt-4 w-full bg-[var(--primary-yellow)] text-white font-bold py-2 rounded-lg">
+            Book Now
+          </button>
+        </div>
+      </div>
+
+      <!-- 6. Corporate & Team-Building -->
+      <div class="bg-[var(--soft-green)] rounded-xl shadow-md overflow-hidden">
+        <img src="/images/services/team-building.jpg" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-[var(--dark-green)]">Corporate & Team Building</h4>
+          <p class="mt-2">
+            A calm environment that encourages collaboration, fresh thinking, and connection.
+          </p>
+
+          <ul class="mt-3 space-y-1 text-sm">
+            <li>✔ Team-friendly zones</li>
+            <li>✔ Ideal for retreats</li>
+            <li>✔ Nature boosts creativity</li>
+          </ul>
+
+          <button class="mt-4 w-full bg-[var(--primary-yellow)] text-white font-bold py-2 rounded-lg">
+            Book Now
+          </button>
+        </div>
+      </div>
+
+      <!-- 7. Picnic & Leisure Grounds -->
+      <div class="bg-[var(--soft-green)] rounded-xl shadow-md overflow-hidden">
+        <img src="/images/services/picnic.jpg" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-[var(--dark-green)]">Picnic & Leisure</h4>
+          <p class="mt-2">
+            Enjoy peaceful green spaces perfect for relaxation, reading, and spending time in nature.
+          </p>
+
+          <ul class="mt-3 space-y-1 text-sm">
+            <li>✔ Serene garden spots</li>
+            <li>✔ Ideal for families</li>
+            <li>✔ Hourly / half-day options</li>
+          </ul>
+
+          <button class="mt-4 w-full bg-[var(--primary-yellow)] text-white font-bold py-2 rounded-lg">
+            Book Now
+          </button>
+        </div>
+      </div>
+
+      <!-- 8. Catering Coordination -->
+      <div class="bg-[var(--soft-green)] rounded-xl shadow-md overflow-hidden">
+        <img src="/images/services/catering.jpg" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-[var(--dark-green)]">Catering Coordination</h4>
+          <p class="mt-2">
+            We connect you with trusted caterers — saving you time while keeping full control.
+          </p>
+
+          <ul class="mt-3 space-y-1 text-sm">
+            <li>✔ Trusted vendor partners</li>
+            <li>✔ Flexible menus</li>
+            <li>✔ Stress-free planning</li>
+          </ul>
+
+          <button class="mt-4 w-full bg-[var(--primary-yellow)] text-white font-bold py-2 rounded-lg">
+            Book Now
+          </button>
+        </div>
+      </div>
+
+      <!-- 9. Décor & Setup Assistance -->
+      <div class="bg-[var(--soft-green)] rounded-xl shadow-md overflow-hidden">
+        <img src="/images/services/decor.jpg" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-[var(--dark-green)]">Decor & Setup Support</h4>
+          <p class="mt-2">
+            Vendor coordination and setup support so your event looks exactly the way you imagined.
+          </p>
+
+          <ul class="mt-3 space-y-1 text-sm">
+            <li>✔ Trusted décor vendors</li>
+            <li>✔ Setup guidance</li>
+            <li>✔ Saves time & stress</li>
+          </ul>
+
+          <button class="mt-4 w-full bg-[var(--primary-yellow)] text-white font-bold py-2 rounded-lg">
+            Book Now
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--dark-green)] text-white py-10 mt-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+
+      <div>
+        <h3 class="text-xl font-bold">Mivule Shades</h3>
+        <p class="mt-3 text-sm">
+          Celebrate. Connect. Cherish.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-bold mb-2">Contacts</h4>
+        <p>📞 +256 783 201409</p>
+        <p>📧 mivuleshades@gmail.com</p>
+        <p>📍 Kansangati – Kitagobwa</p>
+      </div>
+
+      <div>
+        <h4 class="font-bold mb-2">Follow Us</h4>
+        <div class="flex space-x-4 text-2xl">
+          <span>📘</span>
+          <span>📸</span>
+          <span>🎥</span>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center text-sm mt-6 opacity-70">
+      © 2025 Mivule Shades. All Rights Reserved.
+    </p>
+  </footer>
+
+</body>
+</html>
