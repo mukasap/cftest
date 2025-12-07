@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | Mivule Shades</title>
+  
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* Lightbox backdrop animation */
+    .lightbox-show {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+  
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="text-xl font-bold text-[#4B6B2F]">Mivule Shades</a>
+      <nav class="space-x-6 text-gray-700 font-medium">
+        <a href="index.html" class="hover:text-[#D4A017]">Home</a>
+        <a href="about.html" class="hover:text-[#D4A017]">About</a>
+        <a href="services.html" class="hover:text-[#D4A017]">Services</a>
+        <a href="gallery.html" class="text-[#D4A017] font-semibold">Gallery</a>
+        <a href="contact.html" class="hover:text-[#D4A017]">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- PAGE TITLE -->
+  <section class="text-center py-16 bg-[#FAF7F0]">
+    <h1 class="text-4xl font-bold text-[#4B6B2F]">Gallery</h1>
+    <p class="text-gray-600 mt-2">A glimpse into our space, events, and natural beauty.</p>
+  </section>
+  
+  <!-- MASONRY GALLERY -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    
+    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4" id="gallery">
+      
+      <!-- REPLACE WITH YOUR IMAGES -->
+      <img src="assets/gallery/img1.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      
+      <img src="assets/gallery/img2.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      
+      <img src="assets/gallery/img3.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      
+      <img src="assets/gallery/img4.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      
+      <img src="assets/gallery/img5.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      
+      <img src="assets/gallery/img6.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+    </div>
+    
+  </section>
+  
+  <!-- CALL TO ACTION -->
+  <section class="bg-[#4B6B2F] py-16 text-center text-white">
+    <h2 class="text-3xl font-bold">Ready to Host Your Event at Mivule Shades?</h2>
+    <p class="mt-2 text-gray-200">Book a tour or inquire about availability today.</p>
+    
+    <a href="contact.html" class="inline-block bg-[#D4A017] text-white px-8 py-3 mt-6 rounded-xl text-lg font-semibold shadow hover:opacity-90 transition">
+      Inquire Now
+    </a>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between">
+      
+      <div>
+        <h3 class="text-xl font-bold text-white">Mivule Shades</h3>
+        <p class="mt-2 text-gray-400">
+          Kansangati – Kitagobwa<br>
+          +256 783 201409<br>
+          mivuleshades@gmail.com
+        </p>
+      </div>
+      
+      <div class="mt-6 md:mt-0">
+        <p class="font-semibold mb-3 text-white">Follow Us</p>
+        <div class="flex space-x-4 text-gray-400 text-xl">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <p class="text-center text-gray-500 mt-10 text-sm">
+      © 2025 Mivule Shades. All Rights Reserved.
+    </p>
+  </footer>
+  
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center opacity-0 pointer-events-none transition duration-300 z-50">
+    
+    <img id="lightbox-img" src="" class="max-h-[90%] max-w-[90%] rounded-lg shadow-lg">
+  </div>
+  
+  <!-- Lightbox Script -->
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const images = document.querySelectorAll(".gallery-img");
+    
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add("lightbox-show");
+      });
+    });
+    
+    // Close on click anywhere
+    lightbox.addEventListener("click", () => {
+      lightbox.classList.remove("lightbox-show");
+      setTimeout(() => lightboxImg.src = "", 200);
+    });
+    
+    // Close on ESC key
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") lightbox.classList.remove("lightbox-show");
+    });
+  </script>
+  
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a2e0e6ad65.js" crossorigin="anonymous"></script>
+  
+</body>
+
+</html>
