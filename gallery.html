@@ -45,29 +45,20 @@
     
     <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4" id="gallery">
       
-      <!-- REPLACE WITH YOUR IMAGES -->
+      <!-- Gallery Images -->
       <img src="images/galley9.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
-      
       <img src="images/gallery-wedding.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
-      
       <img src="images/gallery-ball.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
-      
       <img src="images/gallery6.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
-      
       <img src="images/gallery-party.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
-      
       <img src="images/gallery-meeting.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
-       <img src="images/gallery6.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
- 
- <img src="images/gallery5.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
- 
- <img src="images/gallery2.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
- 
-  <img src="images/gallery-meeting-1.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
- 
- <img src="images/gallery-event.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
- 
- <img src="images/gallery-meeting.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      <img src="images/gallery6.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      <img src="images/gallery5.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      <img src="images/gallery2.jpg" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      <img src="images/gallery-meeting-1.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      <img src="images/gallery-event.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      <img src="images/gallery-meeting.png" class="gallery-img w-full rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition">
+      
     </div>
     
   </section>
@@ -113,6 +104,9 @@
   <!-- Lightbox -->
   <div id="lightbox" class="fixed inset-0 bg-black/80 flex items-center justify-center opacity-0 pointer-events-none transition duration-300 z-50">
     
+    <!-- Close Button -->
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white text-3xl font-bold hover:text-gray-300">&times;</button>
+    
     <img id="lightbox-img" src="" class="max-h-[90%] max-w-[90%] rounded-lg shadow-lg">
   </div>
   
@@ -120,8 +114,10 @@
   <script>
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.getElementById("lightbox-close");
     const images = document.querySelectorAll(".gallery-img");
     
+    // Open lightbox
     images.forEach(img => {
       img.addEventListener("click", () => {
         lightboxImg.src = img.src;
@@ -129,15 +125,20 @@
       });
     });
     
-    // Close on click anywhere
-    lightbox.addEventListener("click", () => {
-      lightbox.classList.remove("lightbox-show");
-      setTimeout(() => lightboxImg.src = "", 200);
+    // Close on click anywhere or on close button
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox || e.target === closeBtn) {
+        lightbox.classList.remove("lightbox-show");
+        setTimeout(() => lightboxImg.src = "", 200);
+      }
     });
     
     // Close on ESC key
     document.addEventListener("keydown", e => {
-      if (e.key === "Escape") lightbox.classList.remove("lightbox-show");
+      if (e.key === "Escape") {
+        lightbox.classList.remove("lightbox-show");
+        setTimeout(() => lightboxImg.src = "", 200);
+      }
     });
   </script>
   

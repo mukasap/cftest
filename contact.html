@@ -4,142 +4,149 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us – Mivule Shades</title>
+  <meta name="description" content="Reach Mivule Shades in Kitagobwa for bookings, inquiries, or directions. Contact via phone, email, WhatsApp, or visit us on location.">
+  <meta property="og:title" content="Contact Mivule Shades – Book Your Space Today">
+  <meta property="og:description" content="Get in touch with Mivule Shades for family events, meetings, celebrations, and more.">
+  <meta property="og:image" content="/images/abstract1.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://kit.fontawesome.com/a2e00a5a57.js" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2F4F32;
+      --secondary: #7BBF6A;
+      --accent: #F4C27A;
+      --bg-light: #F7F9F3;
+      --text-dark: #2E2E2E;
+    }
+    body { font-family: 'Inter', sans-serif; }
+    .text-primary { color: var(--primary); }
+    .text-secondary { color: var(--secondary); }
+    .text-accent { color: var(--accent); }
+    .bg-light { background-color: var(--bg-light); }
+    .text-dark { color: var(--text-dark); }
+  </style>
 </head>
 
-<body class="bg-[#F7F9F3] text-[#2E2E2E]">
+<body class="bg-light text-dark">
 
-  <!-- NAVBAR (same as home / about) -->
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-[#2F4F32]">Mivule Shades</h1>
-      <nav class="space-x-6 hidden md:block">
-        <a href="index.html" class="text-[#2E2E2E] hover:text-[#7BBF6A]">Home</a>
-        <a href="about.html" class="text-[#2E2E2E] hover:text-[#7BBF6A]">About</a>
-        <a href="services.html" class="text-[#2E2E2E] hover:text-[#7BBF6A]">Services</a>
-        <a href="contact.html" class="text-[#2F4F32] font-semibold">Contact</a>
-      </nav>
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="/" class="flex items-center space-x-2 text-2xl font-extrabold text-gray-900">
+          <img src="images/logo.png" alt="Mivule Shades Logo" class="h-10 w-10"/>
+          <span>Mivule Shades</span>
+        </a>
+
+        <nav class="hidden md:flex space-x-8">
+          <a href="/" class="text-gray-700 hover:text-green-600">Home</a>
+          <a href="/about.html" class="text-gray-700 hover:text-green-600">About</a>
+          <a href="/services.html" class="text-gray-700 hover:text-green-600">Services</a>
+          <a href="/contact.html" class="font-bold text-green-700">Contact</a>
+        </nav>
+
+        <div class="md:hidden">
+          <button id="menu-button" class="text-gray-700 text-3xl focus:outline-none">☰</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pt-2 pb-4 space-y-1 bg-white">
+      <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Home</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">About</a>
+      <a href="/services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100">Services</a>
+      <a href="/contact.html" class="block px-3 py-2 rounded-md text-base font-bold text-green-700 hover:bg-gray-100">Contact</a>
     </div>
   </header>
 
-  <!-- MAIN CONTACT SECTION -->
+  <!-- CONTACT MAIN -->
   <section class="max-w-6xl mx-auto px-6 py-16">
-    
-    <!-- PAGE TITLE -->
-    <h2 class="text-4xl font-extrabold text-[#2F4F32] mb-4">
-      Contact Us
-    </h2>
 
-    <p class="text-lg mb-12">
-      We're here to help you book your space or answer any questions. Reach us directly through any of the options below.
-    </p>
+    <h2 class="text-4xl font-extrabold text-primary mb-4">Contact Us</h2>
+    <p class="text-lg mb-12">We're here to help you book your space or answer any questions. Reach us directly through phone, WhatsApp, email, or visit our location.</p>
 
     <!-- CONTACT GRID -->
     <div class="grid md:grid-cols-3 gap-10">
 
       <!-- PHONE -->
-      <div class="bg-white p-8 rounded-2xl shadow">
+      <div class="bg-white p-8 rounded-2xl shadow hover:scale-105 transition">
         <h3 class="text-xl font-semibold mb-3">Call Us</h3>
         <p class="mb-4">+256 783 201409</p>
-        <a href="tel:+256783201409" 
-           class="inline-block bg-[#F4C27A] text-[#2E2E2E] px-5 py-3 rounded-xl font-semibold shadow hover:bg-[#eeb86c]">
-           Call Now
-        </a>
+        <a href="tel:+256783201409" class="inline-block bg-accent text-dark px-5 py-3 rounded-xl font-bold shadow hover:opacity-90">Call Now</a>
       </div>
 
       <!-- WHATSAPP -->
-      <div class="bg-white p-8 rounded-2xl shadow">
+      <div class="bg-white p-8 rounded-2xl shadow hover:scale-105 transition">
         <h3 class="text-xl font-semibold mb-3">WhatsApp</h3>
         <p class="mb-4">Chat with our team instantly.</p>
-        <a href="https://wa.me/256783201409" 
-           class="inline-block bg-[#7BBF6A] text-white px-5 py-3 rounded-xl font-semibold shadow hover:bg-[#6aad5c]">
-           WhatsApp Us
-        </a>
+        <a href="https://wa.me/256783201409" class="inline-block bg-secondary text-white px-5 py-3 rounded-xl font-bold shadow hover:opacity-90">WhatsApp Us</a>
       </div>
 
       <!-- EMAIL -->
-      <div class="bg-white p-8 rounded-2xl shadow">
+      <div class="bg-white p-8 rounded-2xl shadow hover:scale-105 transition">
         <h3 class="text-xl font-semibold mb-3">Email</h3>
         <p class="mb-4">mivuleshades@gmail.com</p>
-        <a href="mailto:mivuleshades@gmail.com" 
-           class="inline-block bg-[#2F4F32] text-white px-5 py-3 rounded-xl font-semibold shadow hover:bg-[#264127]">
-           Send Email
-        </a>
+        <a href="mailto:mivuleshades@gmail.com" class="inline-block bg-primary text-white px-5 py-3 rounded-xl font-bold shadow hover:opacity-90">Send Email</a>
       </div>
 
     </div>
 
-    <!-- LOCATION & MAP -->
+    <!-- LOCATION -->
     <div class="mt-16">
-      <h3 class="text-2xl font-bold text-[#2F4F32] mb-4">Location</h3>
-
+      <h3 class="text-2xl font-bold text-primary mb-4">Location</h3>
       <p class="mb-6">Find us here:</p>
+      <p class="font-semibold mb-4">Kansangati – Kitagobwa, Gayaza Road</p>
 
-      <p class="font-semibold mb-4">
-        Kansangati – Kitagobwa, Gayaza Road  
-      </p>
+      <div class="rounded-xl overflow-hidden shadow-md mb-6">
+        <iframe src="https://www.google.com/maps?q=0.4470556,32.5720556&z=16&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
 
-      <!-- Map Placeholder -->
-      <section class="py-12 bg-gray-50">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-2xl font-semibold text-gray-800 mb-2">Find Us Easily</h2>
-    <p class="text-gray-600 mb-6">
-      Tap the pin or open the map to get directions to Mivule Shades.
-    </p>
-
-    <!-- Map Embed -->
-    <div class="rounded-xl overflow-hidden shadow-md mb-6">
-      <iframe 
-        src="https://www.google.com/maps?q=0.4470556,32.5720556&z=16&output=embed"
-        width="100%" 
-        height="350" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+      <a href="https://maps.google.com/?q=0.4470556,32.5720556" target="_blank" class="inline-block px-6 py-3 bg-primary text-white rounded-full shadow hover:bg-green-800 transition">Open in Google Maps</a>
     </div>
-
-    <!-- Open Map Button -->
-    <a 
-      href="https://maps.google.com/?q=0.4470556,32.5720556"
-      target="_blank"
-      class="inline-block px-6 py-3 bg-green-700 text-white rounded-full shadow hover:bg-green-800 transition">
-      Open in Google Maps
-    </a>
-  </div>
-</section>
 
     <!-- CTA -->
     <div class="mt-16 text-center">
-      <a href="contact.html" 
-         class="bg-[#F4C27A] text-[#2E2E2E] px-8 py-4 rounded-2xl text-lg font-bold shadow hover:bg-[#eeb86c]">
-         Inquire Now
-      </a>
+      <a href="contact.html" class="bg-accent text-dark px-8 py-4 rounded-2xl text-lg font-bold shadow hover:scale-105 transition">Inquire Now</a>
     </div>
-
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-[#2F4F32] text-white py-10">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between">
+  <footer class="bg-primary text-white py-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
       <div>
         <h3 class="text-xl font-semibold mb-2">Mivule Shades</h3>
         <p class="max-w-xs opacity-80">A natural space for events, meetings, family gatherings, and meaningful connections.</p>
       </div>
 
-      <div class="mt-6 md:mt-0">
-        <h4 class="font-semibold mb-3">Follow Us</h4>
-        <div class="flex space-x-4 text-2xl">
-          <span>🌿</span>
-          <span>📸</span>
-          <span>▶️</span>
-        </div>
+      <div>
+        <h4 class="font-semibold mb-3">Contact</h4>
+        <p>📍 Kitagobwa, Kansangati</p>
+        <p>📧 mivuleshades@gmail.com</p>
+        <p>📞 +256 783 201409</p>
       </div>
 
+      <div>
+        <h4 class="font-semibold mb-3">Follow Us</h4>
+        <div class="flex space-x-4 text-2xl">
+          <a href="#" class="hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-black"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
     </div>
+
+    <p class="text-center text-sm mt-6 opacity-70">&copy; 2025 Mivule Shades. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+
 </body>
-</html>""
+</html>
