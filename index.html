@@ -52,56 +52,127 @@
     .text-dark { color: var(--text-dark); }
     .card-hover:hover { transform: translateY(-5px); box-shadow: 0 12px 20px rgba(0,0,0,0.15); }
   </style>
+  
+<!-- NAVBAR STYLING -->
+<style>
+  /* Desktop hover underline */
+  .nav-link {
+    position: relative;
+    color: #444;
+    padding-bottom: 4px;
+    transition: color .2s;
+  }
+  .nav-link:hover {
+    color: #2f4f32;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    width: 0%;
+    background: #2f4f32;
+    transition: width .25s ease-in-out;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Mobile menu links */
+  .mobile-link {
+    display: block;
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    color: #444;
+    background: #f8f8f8;
+  }
+  .mobile-link:hover {
+    background: #e5e5e5;
+  }
+
+  /* Animated hamburger icon lines */
+  .hamburger-line {
+    width: 24px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* When active (menu open) */
+  .hamburger-active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger-active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+</style>
+
 </head>
 <body class="bg-light text-dark">
 
-  <!-- Header -->
-  <header class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
-        <a href="index.html" class="flex items-center space-x-3 text-2xl font-extrabold text-gray-900 tracking-tight">
-          <img src="/images/logo.png" alt="Mivule Shades Logo" class="h-10 w-10"/>
-          <span class="text-green-800">Mivule</span>
-          <span class="text-gray-900">Shades</span>
-        </a>
+<!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
 
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex space-x-8 items-center">
-          <a href="index.html" class="text-lg font-medium text-gray-700 hover:text-green-600 transition duration-150">Home</a>
-          <a href="about.html" class="text-lg font-medium text-gray-700 hover:text-green-600 transition duration-150">About</a>
-          <a href="services.html" class="text-lg font-medium text-gray-700 hover:text-green-600 transition duration-150">Services</a>
-          <a href="gallery.html" class="text-lg font-medium text-gray-700 hover:text-green-600 transition duration-150">Gallery</a>
-          <a href="contact.html" class="text-lg font-medium text-gray-700 hover:text-green-600 transition duration-150">Contact</a>
-        </nav>
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-3 text-2xl font-extrabold tracking-tight">
+        <img src="/images/logo.png" alt="Mivule Shades Logo" class="h-10 w-10"/>
+        <span class="text-green-800">Mivule</span>
+        <span class="text-gray-900">Shades</span>
+      </a>
 
-        <!-- CTA & Mobile Menu Button -->
-        <div class="flex items-center space-x-4">
-          <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-full shadow-lg text-white bg-green-700 hover:bg-green-800 transition duration-300 transform hover:scale-105">
-            Check Availability
-          </a>
-          <button type="button" class="md:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false" id="menu-button">
-            <span class="sr-only">Open main menu</span>
-            <span class="text-3xl">☰</span> 
-          </button>
-        </div>
-      </div>
-    </div>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8 items-center font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
 
-    <!-- Mobile Menu -->
-    <div class="md:hidden hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 border-t border-gray-200">
-        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Home</a>
-        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">About</a>
-        <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Services</a>
-        <a href="gallery.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Gallery</a>
-        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-200">Contact</a>
+      <!-- CTA + Mobile Menu -->
+      <div class="flex items-center space-x-4">
 
-        <a href="contact.html" class="mt-4 block w-full text-center px-3 py-2 border border-transparent text-base font-bold rounded-lg text-white bg-green-700 hover:bg-green-800 transition duration-300">
+        <!-- Desktop CTA -->
+        <a href="contact.html" class="hidden md:inline-flex items-center justify-center px-6 py-3 text-base font-bold rounded-full text-white bg-green-700 hover:bg-green-800 transition duration-300 shadow-md hover:shadow-lg">
           Check Availability
         </a>
+
+        <!-- Mobile Menu Button (Animated Hamburger) -->
+        <button id="menu-button" class="md:hidden w-10 h-10 flex flex-col justify-center items-center space-y-1">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
     </div>
-  </header>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden transform origin-top transition-all duration-300 bg-white border-t border-gray-200">
+    <div class="px-4 py-4 space-y-3">
+
+      <a href="index.html" class="mobile-link">Home</a>
+      <a href="about.html" class="mobile-link">About</a>
+      <a href="services.html" class="mobile-link">Services</a>
+      <a href="gallery.html" class="mobile-link">Gallery</a>
+      <a href="contact.html" class="mobile-link">Contact</a>
+
+      <a href="contact.html" class="block text-center w-full mt-2 px-4 py-3 rounded-lg font-bold text-white bg-green-700 hover:bg-green-800 transition">
+        Check Availability
+      </a>
+
+    </div>
+  </div>
+</header>
+
 
   <!-- Hero Section -->
   <section class="relative bg-cover bg-center h-[75vh] max-h-[700px]" style="background-image: url('/images/hero.jpg');">
@@ -258,5 +329,25 @@
   </footer>
 
   <!-- Scripts -->
+  <!-- NAVBAR SCRIPT -->
+<script>
+  const menuBtn = document.getElementById("menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    // Animate menu open/close
+    menuBtn.classList.toggle("hamburger-active");
+
+    // Toggle menu visibility
+    mobileMenu.classList.toggle("hidden");
+
+    if (!mobileMenu.classList.contains("hidden")) {
+      mobileMenu.style.transform = "scaleY(1)";
+    } else {
+      mobileMenu.style.transform = "scaleY(0)";
+    }
+  });
+</script>
+
   <script>
     // Mobile
